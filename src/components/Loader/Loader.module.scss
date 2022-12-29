@@ -1,0 +1,26 @@
+.loader {
+  position: fixed;
+  z-index: 5;
+  background-color: #ffffff7d;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.loaderIcon {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  transform: translate(-50%, -50%);
+  animation: loadingInner 2s linear infinite;
+  width: 150px;
+
+  @keyframes loadingInner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+}

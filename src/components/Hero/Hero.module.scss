@@ -1,0 +1,13 @@
+.hero {
+  background: url(../../assets/images/content-hero-comp.png) no-repeat top right;
+  background-size: 550px;
+  min-height: 400px;
+}
+
+.heroContainer {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}

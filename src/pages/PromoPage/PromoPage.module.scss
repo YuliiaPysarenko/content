@@ -1,0 +1,117 @@
+@import '../../styles/variables.scss';
+
+.promoPage {
+  position: relative;
+  z-index: 4;
+}
+
+.promoBlock {
+  align-items: center;
+  text-align: center;
+  background: $promo-block-bgcolor;
+  margin: 1rem;
+  max-width: 1320px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 1320px) {
+    margin: 0 auto 2rem;
+  }
+}
+
+.promoBlock:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.promoBlock a {
+  color: inherit;
+}
+
+.videoZone {
+  // padding: 1rem 0;
+  padding: 1rem;
+  // width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    padding: 1rem;
+    max-width: 350px;
+    margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 500px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2rem;
+  }
+
+  @media (min-width: 1320px) {
+    max-width: 600px;
+  }
+}
+
+.promoVideoContainer {
+  position: relative; 
+  padding-bottom: 56.25%; 
+  padding-top: 30px; 
+  height: 0; 
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    min-width: 300px;
+  }
+}
+
+.promoVideo {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  max-width: 1200px;
+}
+
+.promoText {
+  padding: 1rem;
+  display: inline-block;
+  text-align: justify;
+  border: 2px solid #000;
+  border: calc(2*var(--b)) solid #0000;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50%;
+    padding: 2rem;
+  }
+}
+
+.promoText p {
+  margin-bottom: 1.5rem;
+}
+
+.promoTitle {
+  margin-bottom: 1rem;
+}
+
+.achievementList {
+  list-style: default;
+  list-style-type: disc;
+}
+
+.achievementList li {
+  font-size: 0.85em;
+}
+
+.achievementList li:not(:last-child) {
+  margin-bottom: 1rem;
+}

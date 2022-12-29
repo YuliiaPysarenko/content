@@ -1,0 +1,96 @@
+@import '../../styles/variables.scss';
+
+.mainPage {
+  width: 100%;
+}
+
+.mainPageContainer {
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 4;
+  // background: url(../../assets/images/icon-amplifier.svg) no-repeat right top,
+  // url(../../assets/images/icon-drum.svg) no-repeat left top,
+  // url(../../assets/images/icon-microphone.svg) no-repeat right;
+  // background-size: 100px;
+  // background: $main-background-color url('../../assets/images/bugs_and_bunny_banner1.png') no-repeat left top;
+  // background-size: 100px, cover;
+  // background-color: $main-background-color;
+  // width: 1320px;
+  // height: 100vh;
+  // padding-top: 50px;
+  // margin: 0 auto
+
+  // @media (max-width: 1319px) {
+  //   width: 90%;
+  // }
+}
+
+.mainPageTextContainer {
+  background: url(../../assets/images/content-hero-comp.png) no-repeat bottom;
+  background-size: 100%;
+  min-height: 400px;
+  // display: inline-block;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: justify;
+
+  @media (max-width: 1319px) {
+    width: 90%;
+  }
+
+  @media (min-width: 768px) {
+    background-size: 550px;
+  }
+
+  @media (min-width: 570px) {
+    background: url(../../assets/images/content-hero-comp.png) no-repeat center right;
+    background-size: 50%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.mainPageTextBlock {
+  @media (min-width: 570px) {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  @media (min-width: 570px) and (max-width: 767px) {
+    width: 47%;
+  }
+
+  @media (max-width: 767px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+    display: inline-block;
+  }
+}
+
+.mainPageTextBlock ul {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.mainPageTextBlock li,
+.mainPageTextBlock p {
+  margin-bottom: 1rem;
+}
+
+.mainPageBgImageContainer {
+  background: #fff url(../../assets/images/live-work-create.jpg) fixed top;
+  background-size: cover;
+  height: 300px;
+
+  @media (min-width: 768px) {
+    height: 350px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 400px;
+  }
+}

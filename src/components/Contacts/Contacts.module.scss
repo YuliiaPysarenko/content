@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.contactsContainer {
+  padding: 30px;
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactsText {
+  margin-bottom: 1rem;
+}
+
+.contactsListItem {
+  // display: block;
+
+  // @media (min-width: 768px) {
+    display: inline-block;
+  // }
+}
+
+.contactsListItem:not(:last-child) {
+  // margin-right: 15px;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    margin-right: 75px;
+  }
+}
+
+.contactsLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contactsIcon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.contactsLink:hover,
+.contactsLink:hover .contactsIcon,
+.contactsLink:focus,
+.contactsLink:focus .contactsIcon {
+  @include hover-color;
+}
+
+.contactsPhoneNumber{
+  display: inline-block;
+}

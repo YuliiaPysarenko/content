@@ -1,0 +1,32 @@
+.historyTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.historyContainer {
+  height: 400px;
+  position: sticky;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 1320px) {
+    height: 500px;
+  }
+  margin-bottom: 2rem;
+}
+
+.historyIcon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.historyContainer a {
+  color: inherit;
+}

@@ -1,0 +1,5 @@
+@mixin hover-color {
+  color: $main-color-hover;
+  fill: $main-color-hover;
+  transition: $main-transition-duration;
+}

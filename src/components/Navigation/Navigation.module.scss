@@ -1,0 +1,181 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.navigation {
+  position: absolute;
+  width: calc(100vw - 60px);
+  height: 100vh;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  background: inherit;
+  color: inherit;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    position: static;
+    width: fit-content;
+    height: 70px;
+    padding: 0;
+  }
+
+  @media (max-width:767px) {
+    background: inherit;
+    color: inherit;
+    display: none;
+    transition-property: transform;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-delay: 0;
+    transform: translateX(100%);
+  }
+
+  @media (min-width: 1320px) {
+    position: static;
+  }
+}
+
+.cross + .navigation {
+  @media (max-width:767px) {
+    position: fixed;
+    display: inline-block;
+    transition-property: transform;
+    transition-duration: 200ms;
+    transform: translateX(0);
+  }
+}
+
+.cross {
+  position: fixed !important;
+}
+
+.menuItem {
+  display: block;
+  padding: 20px 0;
+  text-decoration: none;
+  color: $main-color-text;
+  cursor: pointer;
+  z-index: 4;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+    padding: 26px 0;
+  }
+}
+
+.menuItem:hover, .menuItem:focus {
+  @include hover-color;
+}
+
+.menuItem:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.activeLink {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 27px;
+  text-decoration-thickness: 2px;
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menuIcon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.navInput {
+  display: none;
+}
+
+.navLabel {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  --length: 24;
+  --offset: -38;
+  stroke-dasharray: var(--length) var(--total-length);
+  stroke-dashoffset: var(--offset);
+  transition: all .8s cubic-bezier(.645, .045, .355, 1);
+}
+
+.cross .navMenuIcon {
+  .lineOne,
+  .lineThree {
+    --length: 22.627416998;
+  }
+  .lineTwo {
+    --length: 0;
+  }
+}
+
+.menuOne {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  z-index: 10;
+
+  .lineOne,
+  .lineThree {
+    --total-length: 126.64183044433594;
+  }
+  .lineTwo {
+    --total-length: 70;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0;
+    display: none;
+  }
+}
+
+.cross .navMenuIcon {
+  .lineOne,
+  .lineThree {
+    --offset: -94.1149185097;
+  }
+  .lineTwo {
+    --offset: -50;
+  }
+}
+
+.langBtnContainer {
+
+  @media (max-width: 767px) {
+    margin-right: 2rem;
+  }
+}
+
+.lang {
+  display: inline-block;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}

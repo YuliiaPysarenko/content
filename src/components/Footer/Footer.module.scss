@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.footer {
+  width: 100%;
+  padding: 3rem 1rem;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+}
+
+.footerContainer {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    position: relative;
+    padding: 0;
+    align-items: baseline;
+    padding: 0 20px;
+  }
+}
+
+.mailBlock {
+  width: 100%;
+}
+
+.contactsLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: right;
+  }
+}
+
+.contactsIcon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contactsLink:hover,
+.contactsLink:hover .contactsIcon,
+.contactsLink:focus,
+.contactsLink:focus .contactsIcon {
+  @include hover-color;
+}
