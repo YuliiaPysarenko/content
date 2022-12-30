@@ -2,7 +2,7 @@
   "name": "content",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YuliiaPysarenko.github.io/content",
+  "homepage": "https://YuliiaPysarenko.github.io/content/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
@@ -11,6 +11,7 @@
     "axios": "^0.27.2",
     "choreographer-js": "^1.1.0",
     "classnames": "^2.3.1",
+    "gh-pages": "^4.0.0",
     "i18next": "^22.4.6",
     "node-sass": "^7.0.1",
     "particles.js": "^2.0.0",
@@ -29,6 +30,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
