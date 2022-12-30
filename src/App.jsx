@@ -22,8 +22,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Outlet />}>
               <Route index element={<MainPage />} />
-              <Route path={"/portfolio"} element={<PromoPage />} />
-              <Route path={"/contacts"} element={<ContactsPage />} />
+              <Route path={"portfolio"} element={<PromoPage />} />
+              <Route path={"contacts"} element={<ContactsPage />} />
               <Route path="*" element={<MainPage />} />
             </Route>
           </Routes>
